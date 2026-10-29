@@ -10,5 +10,9 @@
   {
     "name": "TapoPulse",
     "folder": "TapoPulse"
+  },
+  {
+    "name": "autoclick1",
+    "folder": "autoclick1"
   }
 ]
