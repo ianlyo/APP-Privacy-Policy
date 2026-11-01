@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - OmniInstaller</title>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --text-color: #1e293b;
+            --text-muted: #64748b;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --border-color: #e2e8f0;
+            --tag-bg: #eff6ff;
+            --tag-color: #1d4ed8;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --primary-color: #3b82f6;
+                --text-color: #f1f5f9;
+                --text-muted: #94a3b8;
+                --bg-color: #0f172a;
+                --card-bg: #1e293b;
+                --border-color: #334155;
+                --tag-bg: #1e3a8a;
+                --tag-color: #bfdbfe;
+            }
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.65;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 24px 16px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border-color);
+        }
+
+        header {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 24px;
+            margin-bottom: 32px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin: 0 0 8px 0;
+            color: var(--primary-color);
+        }
+
+        .meta {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        h2 {
+            font-size: 1.35rem;
+            margin-top: 32px;
+            margin-bottom: 12px;
+            color: var(--text-color);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 6px;
+        }
+
+        p, li {
+            font-size: 1rem;
+            color: var(--text-color);
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .permission-badge {
+            display: inline-block;
+            background-color: var(--tag-bg);
+            color: var(--tag-color);
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .highlight-box {
+            background-color: var(--tag-bg);
+            border-left: 4px solid var(--primary-color);
+            padding: 16px;
+            border-radius: 0 8px 8px 0;
+            margin: 20px 0;
+        }
+
+        .highlight-box p {
+            margin: 0;
+            color: var(--tag-color);
+            font-weight: 500;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            text-align: center;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Privacy Policy</h1>
+        <div class="meta">
+            <strong>Application:</strong> OmniInstaller<br>
+            <strong>Effective Date:</strong> November 1, 2026
+        </div>
+    </header>
+
+    <div class="highlight-box">
+        <p>OmniInstaller is an open-source, local-only utility application. We do NOT collect, transmit, sell, or share any personal data or usage metrics with external servers or third parties.</p>
+    </div>
+
+    <h2>1. Introduction</h2>
+    <p>
+        OmniInstaller is a standalone Android package installer and batch management tool designed to operate entirely on your device. We believe in complete transparency and respect for user privacy. This Privacy Policy outlines how OmniInstaller accesses and processes device data solely for providing app installation and management features.
+    </p>
+
+    <h2>2. Data Collection and Transmission</h2>
+    <ul>
+        <li><strong>No Personal Information Collected:</strong> OmniInstaller does not require user accounts, email addresses, phone numbers, location data, or any personally identifiable information (PII).</li>
+        <li><strong>No Telemetry / Analytics:</strong> OmniInstaller does not integrate any third-party tracking, analytics SDKs (e.g., Google Analytics, Firebase), or ad-serving networks.</li>
+        <li><strong>No Remote Data Transfer:</strong> The application does not upload or transmit files, package metadata, or device information over the Internet. All file parsing, verification, and installations are handled strictly locally.</li>
+    </ul>
+
+    <h2>3. Android Permissions &amp; Data Access</h2>
+    <p>To perform its intended package management and installation functions, OmniInstaller requests specific device permissions. These permissions are used exclusively on-device:</p>
+
+    <ul>
+        <li>
+            <span class="permission-badge">REQUEST_INSTALL_PACKAGES</span><br>
+            <strong>Purpose:</strong> Required to trigger the Android system's standard package installer session for installing and updating APKs, split APK bundles (.apks, .apkm, .xapk), and apps chosen by the user.
+        </li>
+        <li>
+            <span class="permission-badge">MANAGE_EXTERNAL_STORAGE</span> / Storage Permissions<br>
+            <strong>Purpose:</strong> Required to discover, inspect, and parse user-selected installation files (.apk, .apks, .apkm, .xapk), as well as to extract and place associated expansion files (.obb) into the system's <code>/Android/obb/</code> folder as part of complete package installations. OmniInstaller only accesses files relevant to package installation tasks.
+        </li>
+        <li>
+            <span class="permission-badge">QUERY_ALL_PACKAGES</span><br>
+            <strong>Purpose:</strong> Used solely to inspect installed application details (such as current version code and version name) on your device to display upgrade/downgrade status diffs before proceeding with an installation.
+        </li>
+        <li>
+            <span class="permission-badge">FOREGROUND_SERVICE</span> &amp; <span class="permission-badge">POST_NOTIFICATIONS</span><br>
+            <strong>Purpose:</strong> Ensures that long-running batch installations and file extractions can run reliably without being abruptly killed by the operating system, while keeping the user informed of background task progress.
+        </li>
+        <li>
+            <strong>Elevated Execution (Shizuku &amp; Root):</strong><br>
+            <strong>Purpose:</strong> If granted voluntarily by the user, elevated privileges (via Shizuku or Root/libsu) are utilized strictly on-device to execute standard Android package installation commands (<code>pm install</code>) silently or with advanced options (such as downgrade flags). No data is exfiltrated or modified outside of explicit user requests.
+        </li>
+    </ul>
+
+    <h2>4. Third-Party Services</h2>
+    <p>
+        OmniInstaller does not employ any third-party APIs, advertising networks, or external cloud storage providers. It operates as a fully offline and self-contained utility.
+    </p>
+
+    <h2>5. Security</h2>
+    <p>
+        Because all operations take place strictly within the sandboxed and local environment of your Android device, your files and personal data never leave your control. As an open-source project, our code is publicly auditable.
+    </p>
+
+    <h2>6. Children's Privacy</h2>
+    <p>
+        OmniInstaller does not knowingly collect or solicit any personal information from children under the age of 13.
+    </p>
+
+    <h2>7. Changes to This Privacy Policy</h2>
+    <p>
+        We may update this Privacy Policy from time to time to reflect functional updates to the app or legal requirements. Any modifications will be posted here with an updated effective date.
+    </p>
+
+    <h2>8. Contact Us</h2>
+    <p>
+        If you have any questions or feedback regarding this Privacy Policy or OmniInstaller, you can reach out through our official project repository or contact email:
+    </p>
+    <ul>
+        <li><strong>GitHub Issues / Discussions:</strong> <a href="https://github.com/linenyou/OmniInstaller" target="_blank" rel="noopener noreferrer">https://github.com/linenyou/OmniInstaller</a></li>
+        <li><strong>Email:</strong> <a href="mailto:support@omniinstaller.app">support@omniinstaller.app</a> <!-- Replace with your preferred contact email --></li>
+    </ul>
+
+    <footer>
+        &copy; 2026 OmniInstaller. All rights reserved.
+    </footer>
+</div>
+
+</body>
+</html>
